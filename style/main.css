@@ -1,0 +1,26 @@
+:root {
+  /* Brand Colors */
+  --bitcoin-orange: #F7931A;
+
+  /* Font Sizes */
+  --title: 2rem;
+  --subtitle: 1.8rem;
+  --p:1.6rem;
+  --small:1.4rem;
+  --xs: 1.2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+li {
+  list-style-type: none
+}
