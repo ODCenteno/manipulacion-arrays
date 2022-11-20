@@ -5,6 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/main.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+  
   <title>For Each JS</title>
 </head>
 <body>
@@ -29,11 +43,8 @@
 
     tareas.forEach(task => {
       app.innerHTML += `<label>
-        <input id='${task.id}' type="checkbox" name="first_name" placeholder="e.g. Alex"><li>${task.tarea}</li>
+        <input id='${task.id}' type="checkbox" name="first_name" ${task.isDone && "checked"} placeholder="e.g. Alex"><li>${task.tarea}</li>
         </label>`
-      if (task.isDone){
-        document.getElementById(`${task.id}`).checked = true;
-      }
     })
   </script>
 </body>
